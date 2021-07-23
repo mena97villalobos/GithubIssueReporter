@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GithubIssueReporter</string>
+    <string name="selector">Selector</string>
+    <string name="github">GitHub</string>
+    <string name="email">Email</string>
+    <string name="email_optional">Email (Optional)</string>
+</resources>
