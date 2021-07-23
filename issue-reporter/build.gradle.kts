@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("maven-publish")
 }
 
 android {
@@ -41,4 +42,14 @@ dependencies {
     implementation("com.maxkeppeler.sheets:core:$sheets")
     implementation("com.maxkeppeler.sheets:input:$sheets")
     implementation("com.maxkeppeler.sheets:options:$sheets")
+}
+
+afterEvaluate {
+    publishing {
+        (publications) {
+            val release by creating(MavenPublication::class) {
+                from(components["release"])
+            }
+        }
+    }
 }
